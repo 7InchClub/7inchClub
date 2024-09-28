@@ -36,11 +36,7 @@
     .header-logo {
       width: 150px;
       height: 150px;
-      animation: spin 5s linear infinite; /* Spinning animation for logo */
-    }
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+      margin: 0 auto;
     }
     header h1 {
       font-size: 4em;
@@ -51,20 +47,35 @@
       margin: 20px 0;
       text-shadow: 2px 2px #333; /* Text shadow for better visibility */
     }
-    /* Instagram Link Styles */
-    .instagram-link {
-      font-size: 1.5em;
+    /* Social Media Link Styles */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
       margin-top: 20px;
-      background-color: #ffcc00; /* Yellow background for emphasis */
+    }
+    .social-link {
+      font-size: 1.5em;
       padding: 10px 20px;
       border-radius: 8px;
       display: inline-block;
       color: #333;
       text-decoration: none;
       font-weight: bold;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
-    .instagram-link:hover {
+    .social-link.instagram {
+      background-color: #ffcc00; /* Yellow for Instagram */
+    }
+    .social-link.youtube {
+      background-color: #ff0000; /* Red for YouTube */
+      color: #ffffff;
+    }
+    .social-link.twitter {
+      background-color: #1DA1F2; /* Blue for Twitter */
+      color: #ffffff;
+    }
+    .social-link:hover {
       background-color: #ffffff;
       color: #3a86ff;
     }
@@ -226,14 +237,19 @@
 </head>
 <body>
   <div class="container">
-    <!-- Header Section with Spinning Logo -->
+    <!-- Header Section with Logo -->
     <header>
       <div class="header-logo-container">
         <img src="resized_7inch_club_logo.png" alt="7inch Club Logo" class="header-logo">
       </div>
       <h1>The 7inch Club</h1>
-      <!-- Instagram Link in the Header -->
-      <a href="https://www.instagram.com/the7inchclub" target="_blank" class="instagram-link">Instagram</a>
+
+      <!-- Social Media Links in the Header -->
+      <div class="social-links">
+        <a href="https://www.instagram.com/the7inchclub" target="_blank" class="social-link instagram">Instagram</a>
+        <a href="https://www.youtube.com/@7inchclub806" target="_blank" class="social-link youtube">YouTube</a>
+        <a href="https://x.com/7InchClub" target="_blank" class="social-link twitter">Twitter</a>
+      </div>
     </header>
 
     <!-- Main Navigation Section -->
@@ -305,8 +321,6 @@
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1E8PQ8K5ujsdQ3?utm_source=generator&theme=0&autoplay=true" width="100%" height="380" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
       </div>
     </section>
-
-    <!-- Footer Section Removed -->
   </div>
 
   <!-- Back to Top Button -->
