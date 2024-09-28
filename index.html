@@ -141,32 +141,9 @@
     .music-section h2 {
       color: #ff5757;
     }
-    .music-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 20px;
-    }
-    .music-item {
-      background-color: #444;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      transition: background-color 0.3s ease;
-    }
-    .music-item:hover {
-      background-color: #555;
-    }
-    .music-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-    .music-item h3 {
-      margin: 15px 0 10px;
-    }
-    .music-item p {
-      font-size: 1em;
+    .spotify-embed {
+      margin: 0 auto;
+      border-radius: 12px;
     }
   </style>
 </head>
@@ -233,25 +210,8 @@
     <!-- New Music Section -->
     <section id="music" class="music-section">
       <h2>Newly Released Music</h2>
-      <div class="music-grid">
-        <div class="music-item">
-          <img src="https://via.placeholder.com/250" alt="Album Cover">
-          <h3>Artist Name - Song Title</h3>
-          <p>Released on: September 25, 2024</p>
-          <a href="#" style="color: #ff5757;">Listen Now</a>
-        </div>
-        <div class="music-item">
-          <img src="https://via.placeholder.com/250" alt="Album Cover">
-          <h3>Artist Name - Song Title</h3>
-          <p>Released on: September 22, 2024</p>
-          <a href="#" style="color: #ff5757;">Listen Now</a>
-        </div>
-        <div class="music-item">
-          <img src="https://via.placeholder.com/250" alt="Album Cover">
-          <h3>Artist Name - Song Title</h3>
-          <p>Released on: September 18, 2024</p>
-          <a href="#" style="color: #ff5757;">Listen Now</a>
-        </div>
+      <div class="spotify-embed">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1E8PQ8K5ujsdQ3?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
     </section>
 
