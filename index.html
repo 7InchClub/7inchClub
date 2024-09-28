@@ -8,8 +8,8 @@
   <style>
     /* Base Styles */
     body {
-      background-color: #2b2b2b;
-      color: #f0f0f0;
+      background-color: #e3e8f1; /* Light blue background for a fresh look */
+      color: #2d2d2d;
       font-family: 'Roboto Condensed', sans-serif;
       margin: 0;
       padding: 0;
@@ -19,53 +19,64 @@
       margin: 0 auto;
       padding-top: 20px;
     }
+    /* Header Styles */
     header {
       text-align: center;
       padding: 40px 0;
-      border-bottom: 2px solid #444;
-      background: linear-gradient(90deg, #ff8a00, #e52e71);
-      transition: background-position 0.5s ease;
-      background-size: 200%;
+      position: relative;
+      background: linear-gradient(90deg, #3a86ff, #8338ec); /* Blue gradient background */
+      color: #ffffff;
     }
-    header:hover {
-      background-position: right;
+    header .logo {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+      position: relative;
+      animation: spin 5s linear infinite; /* Spinning animation for logo */
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
     header h1 {
       font-size: 4em;
-      color: #ff5757; /* Changed to match the logo's colors */
+      color: #ffcc00; /* Yellow text color for better readability */
       letter-spacing: 4px;
       text-transform: uppercase;
       font-weight: bold;
+      margin: 20px 0;
+      text-shadow: 2px 2px #333; /* Text shadow for better visibility */
     }
     /* Main Navigation Styles */
     .main-nav {
       text-align: center;
       padding: 15px 0;
-      border-bottom: 2px solid #444;
-      background-color: #222;
+      border-bottom: 2px solid #2d2d2d;
+      background-color: #ffffff;
     }
     .main-nav a {
       margin: 0 20px;
       text-decoration: none;
       font-size: 1.2em;
-      color: #ffcc00; /* Updated color to match the logo */
+      color: #3a86ff; /* Updated link color to blue */
       text-transform: uppercase;
       transition: color 0.3s ease;
     }
     .main-nav a:hover {
-      color: #ff5757;
+      color: #8338ec; /* Hover color to match the header gradient */
     }
+    /* Section Styles */
     section {
       margin-top: 50px;
       padding: 20px;
     }
     section h2 {
       font-size: 2.5em;
-      border-bottom: 2px solid #ff5757;
+      border-bottom: 2px solid #3a86ff;
       padding-bottom: 10px;
       margin-bottom: 20px;
       text-transform: uppercase;
-      color: #ff5757;
+      color: #3a86ff;
     }
     .grid {
       display: grid;
@@ -83,8 +94,8 @@
       justify-content: center;
       align-items: center;
       height: 300px;
-      background-color: #ffcc00; /* Updated to match the logo's yellow */
-      color: #fff;
+      background-color: #8338ec;
+      color: #ffffff;
       font-size: 3em;
       text-transform: uppercase;
       font-weight: bold;
@@ -94,30 +105,30 @@
       text-align: center;
       margin-top: 50px;
       padding: 20px 0;
-      background-color: #111;
-      color: #fff;
+      background-color: #ffffff;
+      color: #2d2d2d;
     }
     footer a {
-      color: #ffcc00; /* Updated to match logo */
+      color: #3a86ff;
       text-decoration: none;
       padding: 0 10px;
       font-size: 1.2em;
     }
     footer a:hover {
-      color: #ff5757;
+      color: #8338ec;
     }
     /* Email Signup Popup */
     .email-popup {
       position: fixed;
       bottom: 20px;
       left: 20px;
-      background-color: #1a1a1a;
+      background-color: #ffffff;
       padding: 20px;
-      border: 2px solid #444;
+      border: 2px solid #3a86ff;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       z-index: 1000;
-      color: #fff;
+      color: #2d2d2d;
     }
     .email-popup h3 {
       font-size: 1.5em;
@@ -127,14 +138,14 @@
       width: 100%;
       padding: 10px;
       margin-bottom: 10px;
-      border: 1px solid #444;
+      border: 1px solid #3a86ff;
       border-radius: 4px;
-      background-color: #333;
-      color: #fff;
+      background-color: #f0f0f0;
+      color: #2d2d2d;
     }
     .email-popup button {
-      background-color: #ff8a00;
-      color: #fff;
+      background-color: #3a86ff;
+      color: #ffffff;
       padding: 10px 20px;
       border: none;
       border-radius: 4px;
@@ -143,7 +154,7 @@
       transition: background-color 0.3s ease;
     }
     .email-popup button:hover {
-      background-color: #e52e71;
+      background-color: #8338ec;
     }
     .email-popup .close-btn {
       position: absolute;
@@ -151,17 +162,17 @@
       right: 10px;
       font-size: 1.5em;
       cursor: pointer;
-      color: #fff;
+      color: #2d2d2d;
     }
     /* Music Section */
     .music-section {
-      background-color: #111;
-      color: #fff;
+      background-color: #ffffff;
+      color: #2d2d2d;
       padding: 50px;
       border-radius: 8px;
     }
     .music-section h2 {
-      color: #ff5757;
+      color: #3a86ff;
     }
     .spotify-embed {
       margin: 0 auto;
@@ -172,8 +183,8 @@
       position: fixed;
       bottom: 40px;
       right: 40px;
-      background-color: #ffcc00; /* Updated to yellow to match the logo */
-      color: #fff;
+      background-color: #3a86ff;
+      color: #ffffff;
       padding: 15px 20px;
       border: none;
       border-radius: 50px;
@@ -182,19 +193,21 @@
       display: none;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       transition: background-color 0.3s ease;
-      background-image: url('7inch_club_logo_transparent.png');
+      background-image: url('7inch_club_logo_transparent.png'); /* Using the transparent logo */
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 50px; /* Adjust the size as needed */
+      background-size: 50px;
     }
     .back-to-top:hover {
-      background-color: #ff5757;
+      background-color: #8338ec;
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Header Section with Spinning Logo -->
     <header>
+      <img src="7inch_club_logo_transparent.png" alt="7inch Club Logo" class="logo">
       <h1>The 7inch Club</h1>
     </header>
 
