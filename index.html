@@ -7,90 +7,123 @@
     <title>Your Brand</title>
     <style>
         /* Base Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Oswald:wght@400;700&display=swap');
+
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1e1e1e;
-            color: #f2f2f2;
+            background-color: #0d0d0d;
+            color: #ffffff;
         }
 
         header {
-            background-color: #111;
-            padding: 20px;
+            background-color: #1a1a1a;
+            padding: 40px 20px;
             text-align: center;
+            border-bottom: 3px solid #ff5757;
         }
 
         h1 {
-            font-size: 2.5em;
-            color: #f2f2f2;
-            letter-spacing: 5px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 3em;
+            color: #ff5757;
+            letter-spacing: 8px;
+            text-transform: uppercase;
         }
 
         nav {
             display: flex;
             justify-content: space-around;
             padding: 20px;
-            background-color: #222;
+            background-color: #202020;
+            border-bottom: 2px solid #ff5757;
         }
 
         nav a {
-            color: #f2f2f2;
+            color: #ffffff;
             text-decoration: none;
             font-size: 1.2em;
+            letter-spacing: 3px;
             transition: color 0.3s ease;
+            text-transform: uppercase;
         }
 
         nav a:hover {
-            color: #ff5757;
+            color: #ffdd57;
         }
 
         /* Section Styles */
         section {
-            padding: 40px;
+            padding: 60px 20px;
             text-align: center;
-            border-bottom: 1px solid #333;
+            border-bottom: 2px solid #333;
+            background: linear-gradient(145deg, #1a1a1a 50%, #0d0d0d);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
         }
 
         section h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #ff5757;
+            text-transform: uppercase;
+            letter-spacing: 5px;
         }
 
         section p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            color: #bbb;
+            font-size: 1.3em;
+            line-height: 1.8;
+            color: #d1d1d1;
         }
 
         .content-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
         }
 
         .content-grid img {
             width: 100%;
             height: auto;
-            border-radius: 10px;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content-grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 87, 87, 0.7);
         }
 
         /* Footer Styles */
         footer {
-            background-color: #111;
-            padding: 20px;
+            background-color: #1a1a1a;
+            padding: 30px;
             text-align: center;
             color: #bbb;
+            border-top: 2px solid #ff5757;
+        }
+
+        footer p {
+            font-size: 1.1em;
         }
 
         .social-icons a {
-            margin: 0 10px;
-            color: #f2f2f2;
+            margin: 0 15px;
+            color: #ffffff;
             text-decoration: none;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
         }
 
         .social-icons a:hover {
-            color: #ff5757;
+            color: #ffdd57;
+        }
+
+        /* Add some spacing between sections */
+        section + section {
+            margin-top: 60px;
         }
     </style>
 </head>
@@ -109,7 +142,7 @@
 
 <section id="interviews">
     <h2>Exclusive Interviews</h2>
-    <p>Check out the latest interviews with influential figures in the hip hop scene.</p>
+    <p>Catch up with the most influential voices in the hip-hop world. Dive into their thoughts and stories.</p>
     <div class="content-grid">
         <img src="interview1.jpg" alt="Interview 1">
         <img src="interview2.jpg" alt="Interview 2">
@@ -119,7 +152,7 @@
 
 <section id="clothing">
     <h2>Clothing Collection</h2>
-    <p>Explore our exclusive line of streetwear designed for the bold and fearless.</p>
+    <p>Unleash your style with our bold, street-ready clothing line that sets the tone for fearless fashion.</p>
     <div class="content-grid">
         <img src="clothing1.jpg" alt="Clothing 1">
         <img src="clothing2.jpg" alt="Clothing 2">
@@ -129,7 +162,7 @@
 
 <section id="vlogs">
     <h2>Vlogs</h2>
-    <p>Watch our behind-the-scenes vlogs for an inside look at the brand and lifestyle.</p>
+    <p>Behind the scenes, raw and unfiltered – our vlogs take you deep into the world of urban culture and creativity.</p>
     <div class="content-grid">
         <img src="vlog1.jpg" alt="Vlog 1">
         <img src="vlog2.jpg" alt="Vlog 2">
@@ -139,7 +172,7 @@
 
 <section id="podcasts">
     <h2>Podcasts</h2>
-    <p>Listen to our podcasts featuring discussions on hip hop culture, fashion, and more.</p>
+    <p>Tune in to the hottest discussions on fashion, hip-hop, and culture with some of the most captivating voices.</p>
     <div class="content-grid">
         <img src="podcast1.jpg" alt="Podcast 1">
         <img src="podcast2.jpg" alt="Podcast 2">
