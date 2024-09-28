@@ -8,7 +8,7 @@
   <style>
     /* Base Styles */
     body {
-      background-color: #e3e8f1; /* Light blue background for a fresh look */
+      background-color: #e3e8f1;
       color: #2d2d2d;
       font-family: 'Roboto Condensed', sans-serif;
       margin: 0;
@@ -24,15 +24,21 @@
       text-align: center;
       padding: 40px 0;
       position: relative;
-      background: linear-gradient(90deg, #3a86ff, #8338ec); /* Blue gradient background */
+      background: linear-gradient(90deg, #3a86ff, #8338ec); /* Blue and purple gradient */
       color: #ffffff;
     }
-    header .logo {
+    .header-logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .header-logo {
       width: 150px;
       height: 150px;
-      margin: 0 auto;
+      margin: 0;
       position: relative;
-      animation: spin 5s linear infinite; /* Spinning animation for logo */
+      animation: spin 5s linear infinite;
     }
     @keyframes spin {
       from { transform: rotate(0deg); }
@@ -40,12 +46,12 @@
     }
     header h1 {
       font-size: 4em;
-      color: #ffcc00; /* Yellow text color for better readability */
+      color: #ffcc00;
       letter-spacing: 4px;
       text-transform: uppercase;
       font-weight: bold;
       margin: 20px 0;
-      text-shadow: 2px 2px #333; /* Text shadow for better visibility */
+      text-shadow: 2px 2px #333;
     }
     /* Main Navigation Styles */
     .main-nav {
@@ -58,12 +64,12 @@
       margin: 0 20px;
       text-decoration: none;
       font-size: 1.2em;
-      color: #3a86ff; /* Updated link color to blue */
+      color: #3a86ff;
       text-transform: uppercase;
       transition: color 0.3s ease;
     }
     .main-nav a:hover {
-      color: #8338ec; /* Hover color to match the header gradient */
+      color: #8338ec;
     }
     /* Section Styles */
     section {
@@ -193,7 +199,7 @@
       display: none;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       transition: background-color 0.3s ease;
-      background-image: url('7inch_club_logo_transparent.png'); /* Using the transparent logo */
+      background-image: url('resized_7inch_club_logo_v2.png'); /* Using the updated logo */
       background-repeat: no-repeat;
       background-position: center;
       background-size: 50px;
@@ -207,7 +213,9 @@
   <div class="container">
     <!-- Header Section with Spinning Logo -->
     <header>
-      <img src="7inch_club_logo_transparent.png" alt="7inch Club Logo" class="logo">
+      <div class="header-logo-container">
+        <img src="resized_7inch_club_logo_v2.png" alt="7inch Club Logo" class="header-logo">
+      </div>
       <h1>The 7inch Club</h1>
     </header>
 
@@ -235,123 +243,3 @@
         </div>
       </div>
     </section>
-
-    <!-- Interviews Section -->
-    <section id="interviews">
-      <h2>Interviews</h2>
-      <div class="grid">
-        <div class="video-item">
-          <iframe src="https://www.youtube.com/embed/tRS-RFwwU-U" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="video-item">
-          <iframe src="https://www.youtube.com/embed/QNVQ1eiUcpI" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="video-item">
-          <iframe src="https://www.youtube.com/embed/lKQvO1pfaCg" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- Vlogs Section -->
-    <section id="vlogs">
-      <h2>Vlogs</h2>
-      <div class="grid">
-        <div class="video-item">
-          <iframe src="https://www.youtube.com/embed/6SxSpvYooUU" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="video-item">
-          <iframe src="https://www.youtube.com/embed/LD0dHOJXrWk" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- New Music Section -->
-    <section id="music" class="music-section">
-      <h2>Newly Released Music</h2>
-      <div class="spotify-embed">
-        <!-- Attempting to autoplay the playlist -->
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1E8PQ8K5ujsdQ3?utm_source=generator&theme=0&autoplay=true" width="100%" height="380" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-      </div>
-    </section>
-
-    <!-- Disorder by Byrd Section with Countdown Timer -->
-    <section id="countdown">
-      <h2>Disorder by Byrd</h2>
-      <div class="countdown-timer">
-        Countdown to Launch: <span id="time">00 Days 00:00:00</span>
-      </div>
-    </section>
-
-    <!-- Footer / Social Links -->
-    <footer>
-      <a href="https://www.instagram.com/the7inchclub" target="_blank">Instagram</a>
-    </footer>
-  </div>
-
-  <!-- Back to Top Button -->
-  <button class="back-to-top" id="back-to-top" onclick="scrollToTop()">Top</button>
-
-  <!-- Email Signup Popup -->
-  <div class="email-popup" id="email-popup">
-    <span class="close-btn" onclick="closePopup()">×</span>
-    <h3>Join Our Email List</h3>
-    <input type="email" id="email" placeholder="Enter your email" required>
-    <button onclick="sendEmail()">Subscribe</button>
-  </div>
-
-  <script>
-    // Countdown Timer Script
-    function countdown() {
-      const endDate = new Date("January 1, 2025 00:00:00").getTime();
-      const countdownElement = document.getElementById("time");
-
-      setInterval(function() {
-        const now = new Date().getTime();
-        const distance = endDate - now;
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
-        const minutes = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
-        const seconds = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
-
-        countdownElement.innerHTML = `${days} Days ${hours}:${minutes}:${seconds}`;
-
-        if (distance < 0) {
-          countdownElement.innerHTML = "Launched!";
-        }
-      }, 1000);
-    }
-    countdown();
-
-    // Send Email Function
-    function sendEmail() {
-      const email = document.getElementById("email").value;
-      if (email) {
-        // Hide the popup after email is entered
-        document.getElementById("email-popup").style.display = "none";
-        window.location.href = `mailto:7inchclub21@gmail.com?subject=Email List&body=Email: ${email}`;
-      }
-    }
-
-    // Close Popup Function
-    function closePopup() {
-      document.getElementById("email-popup").style.display = "none";
-    }
-
-    // Scroll to Top Function
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Show/Hide Back to Top Button
-    window.onscroll = function() {
-      const backToTopButton = document.getElementById("back-to-top");
-      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        backToTopButton.style.display = "block";
-      } else {
-        backToTopButton.style.display = "none";
-      }
-    };
-  </script>
-</body>
-</html>
