@@ -8,8 +8,8 @@
   <style>
     /* Base Styles */
     body {
-      background-color: #f8f8f8;
-      color: #333;
+      background-color: #1a1a1a;
+      color: #f0f0f0;
       font-family: 'Roboto Condensed', sans-serif;
       margin: 0;
       padding: 0;
@@ -22,11 +22,12 @@
     header {
       text-align: center;
       padding: 20px 0;
-      border-bottom: 2px solid #ddd;
+      border-bottom: 2px solid #444;
+      background: linear-gradient(90deg, #ff8a00, #e52e71);
     }
     header h1 {
       font-size: 4em;
-      color: #111;
+      color: #fff;
       letter-spacing: 4px;
       text-transform: uppercase;
       font-weight: bold;
@@ -35,14 +36,14 @@
     .main-nav {
       text-align: center;
       padding: 15px 0;
-      border-bottom: 2px solid #ddd;
-      background-color: #fff;
+      border-bottom: 2px solid #444;
+      background-color: #111;
     }
     .main-nav a {
       margin: 0 20px;
       text-decoration: none;
       font-size: 1.2em;
-      color: #333;
+      color: #fff;
       text-transform: uppercase;
       transition: color 0.3s ease;
     }
@@ -55,10 +56,11 @@
     }
     section h2 {
       font-size: 2.5em;
-      border-bottom: 2px solid #333;
+      border-bottom: 2px solid #ff5757;
       padding-bottom: 10px;
       margin-bottom: 20px;
       text-transform: uppercase;
+      color: #ff5757;
     }
     .grid {
       display: grid;
@@ -68,17 +70,20 @@
     .video-item iframe {
       width: 100%;
       height: 300px;
+      border: none;
+      border-radius: 8px;
     }
     .countdown-timer {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 300px;
-      background-color: #333;
+      background-color: #e52e71;
       color: #fff;
       font-size: 3em;
       text-transform: uppercase;
       font-weight: bold;
+      border-radius: 8px;
     }
     footer {
       text-align: center;
@@ -101,12 +106,13 @@
       position: fixed;
       bottom: 20px;
       left: 20px;
-      background-color: #fff;
+      background-color: #1a1a1a;
       padding: 20px;
-      border: 2px solid #ddd;
+      border: 2px solid #444;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       z-index: 1000;
+      color: #fff;
     }
     .email-popup h3 {
       font-size: 1.5em;
@@ -116,11 +122,13 @@
       width: 100%;
       padding: 10px;
       margin-bottom: 10px;
-      border: 1px solid #ddd;
+      border: 1px solid #444;
       border-radius: 4px;
+      background-color: #333;
+      color: #fff;
     }
     .email-popup button {
-      background-color: #333;
+      background-color: #e52e71;
       color: #fff;
       padding: 10px 20px;
       border: none;
@@ -130,13 +138,22 @@
       transition: background-color 0.3s ease;
     }
     .email-popup button:hover {
-      background-color: #ff5757;
+      background-color: #ff8a00;
+    }
+    .email-popup .close-btn {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      font-size: 1.5em;
+      cursor: pointer;
+      color: #fff;
     }
     /* Music Section */
     .music-section {
-      background-color: #333;
+      background-color: #111;
       color: #fff;
       padding: 50px;
+      border-radius: 8px;
     }
     .music-section h2 {
       color: #ff5757;
@@ -211,7 +228,8 @@
     <section id="music" class="music-section">
       <h2>Newly Released Music</h2>
       <div class="spotify-embed">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1E8PQ8K5ujsdQ3?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <!-- Attempting to autoplay the playlist -->
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1E8PQ8K5ujsdQ3?utm_source=generator&theme=0&autoplay=true" width="100%" height="380" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
       </div>
     </section>
 
@@ -225,12 +243,13 @@
 
     <!-- Footer / Social Links -->
     <footer>
-      <a href="https://www.instagram.com/the7inchclub?igshid=ejdiNXFzZmllYnN5&utm_source=qr" target="_blank">Instagram</a>
+      <a href="https://www.instagram.com/the7inchclub" target="_blank">Instagram</a>
     </footer>
   </div>
 
   <!-- Email Signup Popup -->
   <div class="email-popup" id="email-popup">
+    <span class="close-btn" onclick="closePopup()">×</span>
     <h3>Join Our Email List</h3>
     <input type="email" id="email" placeholder="Enter your email" required>
     <button onclick="sendEmail()">Subscribe</button>
@@ -247,9 +266,9 @@
         const distance = endDate - now;
 
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        const hours = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+        const minutes = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+        const seconds = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
 
         countdownElement.innerHTML = `${days} Days ${hours}:${minutes}:${seconds}`;
 
@@ -263,7 +282,16 @@
     // Send Email Function
     function sendEmail() {
       const email = document.getElementById("email").value;
-      window.location.href = `mailto:7inchclub21@gmail.com?subject=Email List&body=Email: ${email}`;
+      if (email) {
+        // Hide the popup after email is entered
+        document.getElementById("email-popup").style.display = "none";
+        window.location.href = `mailto:7inchclub21@gmail.com?subject=Email List&body=Email: ${email}`;
+      }
+    }
+
+    // Close Popup Function
+    function closePopup() {
+      document.getElementById("email-popup").style.display = "none";
     }
   </script>
 </body>
