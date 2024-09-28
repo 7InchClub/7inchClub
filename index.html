@@ -27,17 +27,6 @@
       background: linear-gradient(90deg, #3a86ff, #8338ec); /* Blue gradient background */
       color: #ffffff;
     }
-    .header-logo-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-    .header-logo {
-      width: 150px;
-      height: 150px;
-      margin: 0 auto;
-    }
     header h1 {
       font-size: 4em;
       color: #ffcc00; /* Yellow text color for better readability */
@@ -57,23 +46,43 @@
     .social-link {
       font-size: 1.5em;
       padding: 10px 20px;
-      border-radius: 8px;
+      border-radius: 50px;
       display: inline-block;
-      color: #333;
+      color: #ffffff;
       text-decoration: none;
       font-weight: bold;
       transition: background-color 0.3s ease, color 0.3s ease;
+      display: flex;
+      align-items: center;
     }
     .social-link.instagram {
-      background-color: #ffcc00; /* Yellow for Instagram */
+      background: radial-gradient(circle at 30% 30%, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5); /* Instagram Gradient Colors */
+    }
+    .social-link.instagram i {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f16d"; /* Instagram icon */
+      margin-right: 8px;
     }
     .social-link.youtube {
       background-color: #ff0000; /* Red for YouTube */
       color: #ffffff;
     }
+    .social-link.youtube i {
+      margin-right: 8px;
+      content: "\f16a"; /* YouTube icon */
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+    }
     .social-link.twitter {
       background-color: #1DA1F2; /* Blue for Twitter */
       color: #ffffff;
+    }
+    .social-link.twitter i {
+      margin-right: 8px;
+      content: "\f099"; /* Twitter icon */
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
     }
     .social-link:hover {
       background-color: #ffffff;
@@ -237,18 +246,21 @@
 </head>
 <body>
   <div class="container">
-    <!-- Header Section with Logo -->
+    <!-- Header Section -->
     <header>
-      <div class="header-logo-container">
-        <img src="resized_7inch_club_logo.png" alt="7inch Club Logo" class="header-logo">
-      </div>
       <h1>The 7inch Club</h1>
 
       <!-- Social Media Links in the Header -->
       <div class="social-links">
-        <a href="https://www.instagram.com/the7inchclub" target="_blank" class="social-link instagram">Instagram</a>
-        <a href="https://www.youtube.com/@7inchclub806" target="_blank" class="social-link youtube">YouTube</a>
-        <a href="https://x.com/7InchClub" target="_blank" class="social-link twitter">Twitter</a>
+        <a href="https://www.instagram.com/the7inchclub" target="_blank" class="social-link instagram">
+          <i></i> Instagram
+        </a>
+        <a href="https://www.youtube.com/@7inchclub806" target="_blank" class="social-link youtube">
+          <i></i> YouTube
+        </a>
+        <a href="https://x.com/7InchClub" target="_blank" class="social-link twitter">
+          <i></i> Twitter
+        </a>
       </div>
     </header>
 
@@ -321,6 +333,7 @@
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1E8PQ8K5ujsdQ3?utm_source=generator&theme=0&autoplay=true" width="100%" height="380" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
       </div>
     </section>
+
   </div>
 
   <!-- Back to Top Button -->
