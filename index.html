@@ -145,7 +145,7 @@
       <a href="#podcasts">Podcasts</a>
       <a href="#interviews">Interviews</a>
       <a href="#vlogs">Vlogs</a>
-      <a href="#countdown">Launch Countdown</a>
+      <a href="#countdown">Disorder by Byrd</a>
     </div>
 
     <!-- Podcasts Section -->
@@ -190,9 +190,14 @@
         <div class="video-item">
           <iframe src="https://www.youtube.com/embed/LD0dHOJXrWk" frameborder="0" allowfullscreen></iframe>
         </div>
-        <div class="countdown-timer" id="countdown">
-          Countdown to Launch: <span id="time">00 Days 00:00:00</span>
-        </div>
+      </div>
+    </section>
+
+    <!-- Disorder by Byrd Section with Countdown Timer -->
+    <section id="countdown">
+      <h2>Disorder by Byrd</h2>
+      <div class="countdown-timer">
+        Countdown to Launch: <span id="time">00 Days 00:00:00</span>
       </div>
     </section>
 
@@ -235,5 +240,6 @@
 
     // Send Email Function
     function sendEmail() {
-      const email = document.getElementById("
-
+      const email = document.getElementById("email").value;
+      window.location.href = `mailto:7inchclub21@gmail.com?subject=Email List&body=Email: ${email}`;
+   
