@@ -132,6 +132,42 @@
     .email-popup button:hover {
       background-color: #ff5757;
     }
+    /* Music Section */
+    .music-section {
+      background-color: #333;
+      color: #fff;
+      padding: 50px;
+    }
+    .music-section h2 {
+      color: #ff5757;
+    }
+    .music-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+    .music-item {
+      background-color: #444;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+    .music-item:hover {
+      background-color: #555;
+    }
+    .music-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .music-item h3 {
+      margin: 15px 0 10px;
+    }
+    .music-item p {
+      font-size: 1em;
+    }
   </style>
 </head>
 <body>
@@ -145,6 +181,7 @@
       <a href="#podcasts">Podcasts</a>
       <a href="#interviews">Interviews</a>
       <a href="#vlogs">Vlogs</a>
+      <a href="#music">New Music</a>
       <a href="#countdown">Disorder by Byrd</a>
     </div>
 
@@ -189,6 +226,31 @@
         </div>
         <div class="video-item">
           <iframe src="https://www.youtube.com/embed/LD0dHOJXrWk" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Music Section -->
+    <section id="music" class="music-section">
+      <h2>Newly Released Music</h2>
+      <div class="music-grid">
+        <div class="music-item">
+          <img src="https://via.placeholder.com/250" alt="Album Cover">
+          <h3>Artist Name - Song Title</h3>
+          <p>Released on: September 25, 2024</p>
+          <a href="#" style="color: #ff5757;">Listen Now</a>
+        </div>
+        <div class="music-item">
+          <img src="https://via.placeholder.com/250" alt="Album Cover">
+          <h3>Artist Name - Song Title</h3>
+          <p>Released on: September 22, 2024</p>
+          <a href="#" style="color: #ff5757;">Listen Now</a>
+        </div>
+        <div class="music-item">
+          <img src="https://via.placeholder.com/250" alt="Album Cover">
+          <h3>Artist Name - Song Title</h3>
+          <p>Released on: September 18, 2024</p>
+          <a href="#" style="color: #ff5757;">Listen Now</a>
         </div>
       </div>
     </section>
@@ -242,4 +304,7 @@
     function sendEmail() {
       const email = document.getElementById("email").value;
       window.location.href = `mailto:7inchclub21@gmail.com?subject=Email List&body=Email: ${email}`;
-   
+    }
+  </script>
+</body>
+</html>
