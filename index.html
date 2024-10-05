@@ -6,7 +6,6 @@
     <title>The 7inch Club</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Base Styles */
         body, html {
             margin: 0;
             padding: 0;
@@ -19,7 +18,6 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-        /* Header */
         header {
             background-color: #ffffff;
             border-bottom: 2px solid #333;
@@ -53,7 +51,6 @@
         .nav-links a:hover {
             color: #3a86ff;
         }
-        /* Hero Section */
         .hero {
             text-align: center;
             padding: 80px 20px;
@@ -81,7 +78,6 @@
         .btn:hover {
             background-color: #8338ec;
         }
-        /* Sections */
         .section {
             padding: 60px 20px;
             text-align: center;
@@ -96,7 +92,6 @@
             margin: 0 auto 40px;
             max-width: 800px;
         }
-        /* Card Grid */
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -126,7 +121,6 @@
             font-size: 1em;
             color: #666;
         }
-        /* Countdown Timer */
         .countdown-timer {
             font-size: 3em;
             font-weight: bold;
@@ -135,7 +129,6 @@
             padding: 30px;
             border-radius: 8px;
         }
-        /* Social Media Links */
         .social-links {
             display: flex;
             justify-content: center;
@@ -155,7 +148,6 @@
             background-color: #ffffff;
             color: #3a86ff;
         }
-        /* Footer */
         footer {
             background-color: #333;
             color: #fff;
@@ -171,7 +163,6 @@
         footer a:hover {
             color: #8338ec;
         }
-        /* Responsive Design */
         @media (max-width: 768px) {
             .container {
                 width: 95%;
@@ -187,7 +178,6 @@
     </style>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
         <div class="container nav-container">
             <div class="logo">The 7inch Club</div>
@@ -215,18 +205,9 @@
 
     <!-- Podcasts Section -->
     <section class="section" id="podcasts">
-        <h2>Podcasts</h2>
+        <h2>Full Podcasts</h2>
         <div class="container card-grid">
-            <div class="card">
-                <iframe src="https://www.youtube.com/embed/be39Jc-VUKA" frameborder="0" allowfullscreen></iframe>
-                <h3>Episode 1: The Origins of Hip-Hop</h3>
-                <p>An in-depth conversation on how Hip-Hop culture emerged and evolved.</p>
-            </div>
-            <div class="card">
-                <iframe src="https://www.youtube.com/embed/gFNOTbyZoMA" frameborder="0" allowfullscreen></iframe>
-                <h3>Episode 2: Fashion & Streetwear</h3>
-                <p>Exploring the impact of streetwear on mainstream fashion.</p>
-            </div>
+            <!-- Add your podcast videos here with updated descriptions -->
         </div>
     </section>
 
@@ -234,16 +215,7 @@
     <section class="section" id="interviews">
         <h2>Interviews</h2>
         <div class="container card-grid">
-            <div class="card">
-                <iframe src="https://www.youtube.com/embed/tRS-RFwwU-U" frameborder="0" allowfullscreen></iframe>
-                <h3>Interview with Artist X</h3>
-                <p>An exclusive interview with one of the biggest names in the industry.</p>
-            </div>
-            <div class="card">
-                <iframe src="https://www.youtube.com/embed/QNVQ1eiUcpI" frameborder="0" allowfullscreen></iframe>
-                <h3>Interview with Fashion Icon Y</h3>
-                <p>Insights from a renowned fashion icon on the latest trends.</p>
-            </div>
+            <!-- Add your interview videos here with updated descriptions -->
         </div>
     </section>
 
@@ -251,13 +223,49 @@
     <section class="section" id="vlogs">
         <h2>Vlogs</h2>
         <div class="container card-grid">
-            <div class="card">
-                <iframe src="https://www.youtube.com/embed/6SxSpvYooUU" frameborder="0" allowfullscreen></iframe>
-                <h3>Behind the Scenes: 7inch Club</h3>
-                <p>A look behind the scenes at our latest photoshoot.</p>
-            </div>
-            <div class="card">
-                <iframe src="https://www.youtube.com/embed/LD0dHOJXrWk" frameborder="0" allowfullscreen></iframe>
-                <h3>Day inHere's the complete code that incorporates all the links and sections from your previous HTML into a structured design similar to CRTZ.xyz:
+            <!-- Add your vlog videos here with updated descriptions -->
+        </div>
+    </section>
 
-```html
+    <!-- Clips Section -->
+    <section class="section" id="clips">
+        <h2>Clips</h2>
+        <div class="container card-grid">
+            <!-- Add your clip videos here with updated descriptions -->
+        </div>
+    </section>
+
+    <!-- Disorder by Byrd Section with Countdown Timer -->
+    <section class="section" id="countdown">
+        <h2>Disorder by Byrd</h2>
+        <div class="countdown-timer" id="countdown-timer">
+            Countdown to Launch: <span id="time">00 Days 00:00:00</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 The 7inch Club. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function countdown() {
+            const endDate = new Date("January 1, 2025 00:00:00").getTime();
+            const countdownElement = document.getElementById("time");
+
+            setInterval(function() {
+                const now = new Date().getTime();
+                const distance = endDate - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+                const minutes = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+                const seconds = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
+
+                countdownElement.innerHTML = `${days} Days ${hours}:${minutes}:${seconds}`;
+
+                ifI've structured the HTML to include sections for **Full Podcasts**, **Vlogs**, **Interviews**, and **Clips**. The countdown timer for *Disorder by Byrd* is also set for January 1, 2025.
+
+Next steps:
+
+1. I need specific descriptions or categorization of your videos to accurately place them under each section.
+2. Let me know if you want to modify any other details like colors, layout, or additional sections.
