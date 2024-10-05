@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +42,7 @@
         }
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 20px;
         }
         .nav-links a {
             text-decoration: none;
@@ -142,6 +143,26 @@
         footer a:hover {
             color: #8338ec;
         }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding-top: 10px;
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
+            .main-nav a {
+                margin: 5px;
+                font-size: 0.9em;
+            }
+            .section h2 {
+                font-size: 1.5em;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -154,7 +175,10 @@
                 <a href="#interviews">Interviews</a>
                 <a href="#vlogs">Vlogs</a>
                 <a href="#music">New Music</a>
-                <a href="#shop">Shop</a>
+                <a href="#countdown">Disorder by Byrd</a>
+                <a href="https://www.instagram.com/the7inchclub" target="_blank">Instagram</a>
+                <a href="https://www.youtube.com/@7inchclub806" target="_blank">YouTube</a>
+                <a href="https://x.com/7InchClub" target="_blank">Twitter</a>
             </nav>
         </div>
     </header>
@@ -186,12 +210,50 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 The 7inch Club. All Rights Reserved.</p>
-        <a href="#instagram">Instagram</a>
-        <a href="#youtube">YouTube</a>
-        <a href="#twitter">Twitter</a>
-    </footer>
-</body>
-</html>
+    <!-- Interviews Section -->
+    <section class="section" id="interviews">
+        <h2>Interviews</h2>
+        <div class="container card-grid">
+            <div class="card">
+                <img src="interview1.jpg" alt="Interview 1">
+                <h3>Interview with Artist X</h3>
+                <p>An exclusive interview with one of the biggest names in the industry.</p>
+            </div>
+            <div class="card">
+                <img src="interview2.jpg" alt="Interview 2">
+                <h3>Interview with Fashion Icon Y</h3>
+                <p>Insights from a renowned fashion icon on the latest trends.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vlogs Section -->
+    <section class="section" id="vlogs">
+        <h2>Vlogs</h2>
+        <div class="container card-grid">
+            <div class="card">
+                <img src="vlog1.jpg" alt="Vlog 1">
+                <h3>Behind the Scenes: 7inch Club</h3>
+                <p>A look behind the scenes at our latest photoshoot.</p>
+            </div>
+            <div class="card">
+                <img src="vlog2.jpg" alt="Vlog 2">
+                <h3>Day in the Life of Artist Z</h3>
+                <p>Follow Artist Z through a day filled with creativity and inspiration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disorder by Byrd Section with Countdown Timer -->
+    <section class="section" id="countdown">
+        <h2>Disorder by Byrd</h2>
+        <div class="countdown-timer">
+            Countdown to Launch: <span id="time">00 Days 00:00:00</span>
+        </div>
+    </section>
+
+    <!-- New Music Section -->
+    <section class="section" id="music">
+        <h2>Newly Released Music</h2>
+        <div class="spotify-embed">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1E8PQ8K5ujsdQ3?utm_source=generator&theme=0&Here's the updated template that incorporates all of your previous links and sections with the new design structure similar to CRTZ.xyz:
